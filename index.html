@@ -3,77 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio do Aluno</title>
+<title>Página Interativa</title>
 
 <style>
   body {
-    margin: 0;
     font-family: Arial;
-    background: #0f172a;
-    color: white;
+    text-align: center;
+    background-color: #f1f5f9;
+    margin: 0;
   }
 
   header {
-    background: #1e40af;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  header h1 {
-    margin: 0;
-    font-size: 20px;
-  }
-
-  nav a {
+    background-color: #1e40af;
     color: white;
-    margin-left: 15px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  nav a:hover {
-    text-decoration: underline;
+    padding: 20px;
   }
 
   section {
     padding: 40px;
-    text-align: center;
   }
 
-  .btn {
-    padding: 10px 20px;
-    background: #3b82f6;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-
-  .card {
-    background: #1e293b;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-  }
-
-  footer {
-    background: #020617;
-    text-align: center;
+  button {
     padding: 15px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
   }
 
-  /* RESPONSIVO */
-  @media (max-width: 600px) {
-    header {
-      flex-direction: column;
-    }
+  .btn1 { background: #22c55e; color: white; }
+  .btn2 { background: #ef4444; color: white; }
+  .btn3 { background: #3b82f6; color: white; }
 
-    nav {
-      margin-top: 10px;
-    }
-  }
 </style>
 
 </head>
@@ -81,52 +43,30 @@
 <body>
 
 <header>
-  <h1>Meu Portfólio</h1>
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#contato">Contato</a>
-  </nav>
+  <h1>🎮 Página Interativa</h1>
 </header>
 
-<section id="sobre">
-  <h2>Sobre mim</h2>
-  <p>Olá! Meu nome é [JULIA]. Estou aprendendo programação.</p>
-</section>
+<section>
 
-<section id="projetos">
-  <h2>Meus Projetos</h2>
+  <h2>Teste os botões</h2>
 
-<div class="card">
-  <h3>Projeto 1</h3>
-  <p>Meu primeiro site no GitHub</p>
-
-  <a href="https://google.com" target="_blank">
-    <img src='623dda7e41299cacaoo_html_blog-scaled.jpeg' width="200">
-  </a>
-
-</div>
-
-<div class="card">
-  <h3>Projeto 1 </h3>
-  <p>Em desenvolvimento...</p>
-  <img src="https://via.placeholder.com/200" alt="Projeto 2">
-</div>
+  <button class="btn1" onclick="mensagem()">Mostrar mensagem</button>
+  <button class="btn2" onclick="mudarCor()">Mudar cor</button>
+  <button class="btn3" onclick="voltarCor()">Voltar cor</button>
 
 </section>
-
-<section id="contato">
-  <h2>Contato</h2>
-  <button class="btn" onclick="mensagem()">Falar comigo</button>
-</section>
-
-<footer>
-  © 2026 - Meu Portfólio
-</footer>
 
 <script>
 function mensagem() {
-  alert("Obrigado por visitar meu site!");
+  alert("Você clicou no botão!");
+}
+
+function mudarCor() {
+  document.body.style.backgroundColor = "#dbeafe";
+}
+
+function voltarCor() {
+  document.body.style.backgroundColor = "#f1f5f9";
 }
 </script>
 
